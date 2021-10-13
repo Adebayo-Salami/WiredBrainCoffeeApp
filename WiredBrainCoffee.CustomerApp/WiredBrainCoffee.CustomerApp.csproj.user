@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectView>ProjectFiles</ProjectView>
+    <Source>C:\Users\osalami\Downloads\coffee.png</Source>
+    <SmallTileSource>C:\Users\osalami\Downloads\coffee.png</SmallTileSource>
+    <MediumTileSource>C:\Users\osalami\Downloads\coffee.png</MediumTileSource>
+    <WideTileSource>C:\Users\osalami\Downloads\coffee.png</WideTileSource>
+    <LargeTileSource>C:\Users\osalami\Downloads\coffee.png</LargeTileSource>
+    <AppIconSource>C:\Users\osalami\Downloads\coffee.png</AppIconSource>
+    <SplashScreenSource>C:\Users\osalami\Downloads\coffee.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\osalami\Downloads\coffee.png</PackageLogoSource>
+  </PropertyGroup>
+</Project>
