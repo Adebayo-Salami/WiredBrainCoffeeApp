@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:WiredBrainCoffee.CustomerApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:WiredBrainCoffee.CustomerApp.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:WiredBrainCoffee.CustomerApp.Controls" xmlns:model="using:WiredBrainCoffee.CustomerApp.Model"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Width="600"
@@ -79,6 +79,15 @@
             <TextBox Header="Lastname" Name="txtLastName" Margin="10" TextChanged="TextBox_TextChanged"/>
             <CheckBox Content="Is Developer" x:Name="chkIsDeveloper" Margin="10" Checked="CheckBox_IsCheckChanged"  Unchecked="CheckBox_IsCheckChanged"/>
         </StackPanel>-->
-        <controls:CustomerDetailControl Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl" />
+        <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl" />-->
+        <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl">
+            <controls:CustomerDetailControl.Customer>
+                <model:Customer Firstname="Thoma" Lastname="Developer" IsDeveloper="True" />
+            </controls:CustomerDetailControl.Customer>
+        </controls:CustomerDetailControl>-->
+        <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl">
+            <model:Customer Firstname="Thoma" Lastname="Developer2" IsDeveloper="True" />
+        </controls:CustomerDetailControl>  Content Property style-->
+        <controls:CustomerDetailControl Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl" Customer="Bayo,Dev,True" />
     </Grid>
 </Page>

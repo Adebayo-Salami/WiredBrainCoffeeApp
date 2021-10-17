@@ -25,7 +25,9 @@
       <RootEvent Name="Checked" />
       <RootEvent Name="Unchecked" />
     </RootType>
-    <RootType FullName="WiredBrainCoffee.CustomerApp.Controls.CustomerDetailControl" />
+    <RootType FullName="WiredBrainCoffee.CustomerApp.Controls.CustomerDetailControl">
+      <RootProperty Name="Customer" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="Width" />
