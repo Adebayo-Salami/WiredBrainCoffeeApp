@@ -23,7 +23,6 @@ C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainC
 C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\bin\x86\Debug\System.Runtime.dll
 C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
 C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\WiredBrainCoffee.CustomerApp.csproj.CoreCompileInputs.cache
-C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\WiredBrainCoffee.CustomerApp.csproj.CopyComplete
 C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\WiredBrainCoffee.CustomerApp.exe
 C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\WiredBrainCoffee.CustomerApp.pdb
 C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\ResourceHandlingTask.state
@@ -44,3 +43,8 @@ C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainC
 C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424779200000000.json
+C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\Controls\CustomerDetailControl.g.i.cs
+C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\Controls\CustomerDetailControl.g.cs
+C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\Controls\CustomerDetailControl.xaml
+C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\Controls\CustomerDetailControl.xbf
+C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\bin\x86\Debug\Controls\CustomerDetailControl.xbf

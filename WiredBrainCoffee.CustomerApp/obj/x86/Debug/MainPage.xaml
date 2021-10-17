@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:WiredBrainCoffee.CustomerApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:WiredBrainCoffee.CustomerApp.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Width="600"
@@ -46,16 +46,16 @@
             </Grid.RowDefinitions>
 
             <StackPanel Orientation="Horizontal">
-                <Button x:ConnectionId='7' Margin="10"                      >
-                    <SymbolIcon x:ConnectionId='10' x:Name="moveSymbolIcon" Symbol="Forward"/>
+                <Button x:ConnectionId='5' Margin="10"                      >
+                    <SymbolIcon x:ConnectionId='8' x:Name="moveSymbolIcon" Symbol="Forward"/>
                 </Button>
-                <Button x:ConnectionId='8' Margin="10"                        >
+                <Button x:ConnectionId='6' Margin="10"                        >
                     <StackPanel Orientation="Horizontal">
                         <SymbolIcon Symbol="AddFriend"/>
                         <TextBlock Text="Add" Margin="5 0 0 0" />
                     </StackPanel>
                 </Button>
-                <Button x:ConnectionId='9' Margin="10"                           >
+                <Button x:ConnectionId='7' Margin="10"                           >
                     <StackPanel Orientation="Horizontal">
                         <SymbolIcon Symbol="Delete"/>
                         <TextBlock Text="Delete" Margin="5 0 0 0" />
@@ -63,7 +63,9 @@
                 </Button>
             </StackPanel>
 
-            <ListView x:ConnectionId='6' Grid.Row="1" x:Name="customerListView" DisplayMemberPath="Lastname"                                                     />
+            <ListView x:ConnectionId='4' Grid.Row="1" x:Name="customerListView" DisplayMemberPath="Lastname"                                                     >
+                <!--<model:Customer Firstname="Thomas" Lastname="Huber" IsDeveloper="True" />-->
+            </ListView>
             <!--<ListView Grid.Row="1">
                 <ListViewItem>Thomas</ListViewItem>
                 <ListViewItem>Julia</ListViewItem>
@@ -72,11 +74,12 @@
         </Grid>
 
         <!-- Customer Detail -->
-        <StackPanel Grid.Row="1" Grid.Column="1">
-            <TextBox x:ConnectionId='3' Header="Firstname" Name="txtFirstName" Margin="10"                                  />
-            <TextBox x:ConnectionId='4' Header="Lastname" Name="txtLastName" Margin="10"                                  />
-            <CheckBox x:ConnectionId='5' Content="Is Developer" x:Name="chkIsDeveloper" Margin="10"                                                                       />
-        </StackPanel>
+        <!--<StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBox Header="Firstname" Name="txtFirstName" Margin="10" TextChanged="TextBox_TextChanged"/>
+            <TextBox Header="Lastname" Name="txtLastName" Margin="10" TextChanged="TextBox_TextChanged"/>
+            <CheckBox Content="Is Developer" x:Name="chkIsDeveloper" Margin="10" Checked="CheckBox_IsCheckChanged"  Unchecked="CheckBox_IsCheckChanged"/>
+        </StackPanel>-->
+        <controls:CustomerDetailControl x:ConnectionId='3' Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl" />
     </Grid>
 </Page>
 

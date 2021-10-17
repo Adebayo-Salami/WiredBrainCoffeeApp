@@ -51,15 +51,21 @@ namespace WiredBrainCoffee.CustomerApp
             deferral.Complete();
         }
 
-        private async void Btn_AddCustomer(object sender, RoutedEventArgs e)
+        private void Btn_AddCustomer(object sender, RoutedEventArgs e)
         {
-            var messageDialogue = new MessageDialog("C# -- Customer Added Succesfully!");
-            await messageDialogue.ShowAsync();
+            //var messageDialogue = new MessageDialog("C# -- Customer Added Succesfully!");
+            //await messageDialogue.ShowAsync();
+
+            var customer = new Customer { Firstname = "New" };
+            customerListView.Items.Add(customer);
+            customerListView.SelectedItem = customer;
         }
 
         private void Btn_DeleteCustomer(object sender, RoutedEventArgs e)
         {
-
+            var customer = (Customer)customerListView.SelectedItem;
+            if (customer != null)
+                customerListView.Items.Remove(customer);
         }
 
         private void Btn_MoveClick(object sender, RoutedEventArgs e)
@@ -75,30 +81,31 @@ namespace WiredBrainCoffee.CustomerApp
         private void CustomerListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var customer = customerListView.SelectedItem as Customer;
-            txtFirstName.Text = customer?.Firstname ?? "";
-            txtLastName.Text = customer?.Lastname ?? "";
-            chkIsDeveloper.IsChecked = customer?.IsDeveloper;
+            customerDetailControl.Customer = customer;
+            //txtFirstName.Text = customer?.Firstname ?? "";
+            //txtLastName.Text = customer?.Lastname ?? "";
+            //chkIsDeveloper.IsChecked = customer?.IsDeveloper;
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            UpdateCustomer();
-        }
+        //private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        //{
+        //    UpdateCustomer();
+        //}
 
-        private void CheckBox_IsCheckChanged(object sender, RoutedEventArgs e)
-        {
-            UpdateCustomer();
-        }
+        //private void CheckBox_IsCheckChanged(object sender, RoutedEventArgs e)
+        //{
+        //    UpdateCustomer();
+        //}
 
-        private void UpdateCustomer()
-        {
-            var customer = customerListView.SelectedItem as Customer;
-            if (customer != null)
-            {
-                customer.Firstname = txtFirstName.Text;
-                customer.Lastname = txtLastName.Text;
-                customer.IsDeveloper = chkIsDeveloper.IsChecked.GetValueOrDefault();
-            }
-        }
+        //private void UpdateCustomer()
+        //{
+        //    var customer = customerListView.SelectedItem as Customer;
+        //    if (customer != null)
+        //    {
+        //        customer.Firstname = txtFirstName.Text;
+        //        customer.Lastname = txtLastName.Text;
+        //        customer.IsDeveloper = chkIsDeveloper.IsChecked.GetValueOrDefault();
+        //    }
+        //}
     }
 }
