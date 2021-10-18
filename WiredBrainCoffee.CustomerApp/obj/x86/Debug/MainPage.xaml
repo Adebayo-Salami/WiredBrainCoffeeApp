@@ -51,23 +51,23 @@
 
         <!-- Customer List -->
         <!--<Grid x:Name="customerListGrid" Grid.Row="1" Background="#EEEEEE">-->
-        <Grid x:Name="customerListGrid" Grid.Row="1" Background="{StaticResource customerListBGBrush}">
+        <Grid x:ConnectionId='2' x:Name="customerListGrid" Grid.Row="1" Background="{StaticResource customerListBGBrush}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
                 <RowDefinition />
             </Grid.RowDefinitions>
 
             <StackPanel Orientation="Horizontal">
-                <Button Margin="10" Click="Btn_MoveClick">
-                    <SymbolIcon x:Name="moveSymbolIcon" Symbol="Forward"/>
+                <Button x:ConnectionId='5' Margin="10"                      >
+                    <SymbolIcon x:ConnectionId='8' x:Name="moveSymbolIcon" Symbol="Forward"/>
                 </Button>
-                <Button Margin="10" Click="Btn_AddCustomer">
+                <Button x:ConnectionId='6' Margin="10"                        >
                     <StackPanel Orientation="Horizontal">
                         <SymbolIcon Symbol="AddFriend"/>
                         <TextBlock Text="Add" Margin="5 0 0 0" />
                     </StackPanel>
                 </Button>
-                <Button Margin="10" Click="Btn_DeleteCustomer">
+                <Button x:ConnectionId='7' Margin="10"                           >
                     <StackPanel Orientation="Horizontal">
                         <SymbolIcon Symbol="Delete"/>
                         <TextBlock Text="Delete" Margin="5 0 0 0" />
@@ -75,7 +75,7 @@
                 </Button>
             </StackPanel>
 
-            <ListView Grid.Row="1" x:Name="customerListView" DisplayMemberPath="Lastname" SelectionChanged="CustomerListView_SelectionChanged">
+            <ListView x:ConnectionId='4' Grid.Row="1" x:Name="customerListView" DisplayMemberPath="Lastname"                                                     >
                 <!--<model:Customer Firstname="Thomas" Lastname="Huber" IsDeveloper="True" />-->
             </ListView>
             <!--<ListView Grid.Row="1">
@@ -102,6 +102,7 @@
         </controls:CustomerDetailControl>  Content Property style-->
         <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl" Customer="Bayo,Dev,True" />-->
         <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl" Customer="{StaticResource customerAnn}" />-->
-        <controls:CustomerDetailControl Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl" />
+        <controls:CustomerDetailControl x:ConnectionId='3' Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl" />
     </Grid>
 </Page>
+
