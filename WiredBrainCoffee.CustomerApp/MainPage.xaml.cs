@@ -30,8 +30,8 @@ namespace WiredBrainCoffee.CustomerApp
 
         public MainPage()
         {
-            this.InitializeComponent();
-            this.Loaded += MainPage_Loaded;
+            InitializeComponent();
+            Loaded += MainPage_Loaded;
             App.Current.Suspending += App_Suspending;
             _customerDataProvider = new CustomerDataProvider();
         }

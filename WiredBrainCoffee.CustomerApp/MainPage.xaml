@@ -10,7 +10,17 @@
     Width="600"
     Height="400">
 
+    <!--<Page.Resources>-->
+        <!--<model:Customer x:Key="cutomerAnnDev" Firstname="Anna" Lastname=".NET DEV" IsDeveloper="True" />
+        <model:Customer x:Key="customerAnn" Firstname="Anna" Lastname="Chan" IsDeveloper="False" />-->
+        <!--<x:String x:Key="applicationTitle">Coffee Customers</x:String>
+        <SolidColorBrush x:Key="customerListBGBrush" Color="#EEEEEE" />-->
+    <!--</Page.Resources>-->
+
     <Grid>
+        <!--<Grid.Resources>
+            <model:Customer x:Key="customerAnn" Firstname="Anna" Lastname="Chan" IsDeveloper="True" />
+        </Grid.Resources>-->
         <!--<Button Content="Add Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Click="Btn_AddCustomer" />-->
         <!--<Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Click="Btn_AddCustomer">
             <Button.Content>
@@ -34,12 +44,14 @@
         <!-- Header -->
         <StackPanel Background="#F05A28" Orientation="Horizontal" Grid.ColumnSpan="3">
             <Image Source="Image/coffee2.jpg" Height="90" Margin="5" />
-            <TextBlock Text="Coffee Cutomers" FontSize="30" FontWeight="ExtraBold" Foreground="White" VerticalAlignment="Bottom" Margin="20" />
+            <!--<TextBlock Text="Coffee Cutomers" FontSize="30" FontWeight="ExtraBold" Foreground="White" VerticalAlignment="Bottom" Margin="20" />-->
+            <TextBlock Text="{StaticResource applicationTitle}" FontSize="30" FontWeight="ExtraBold" Foreground="White" VerticalAlignment="Bottom" Margin="20" />
             <TextBlock Text="Version 1.0" Foreground="#333333" VerticalAlignment="Bottom" Margin="0 0 0 25" />
         </StackPanel>
 
         <!-- Customer List -->
-        <Grid x:Name="customerListGrid" Grid.Row="1" Background="LightGray">
+        <!--<Grid x:Name="customerListGrid" Grid.Row="1" Background="#EEEEEE">-->
+        <Grid x:Name="customerListGrid" Grid.Row="1" Background="{StaticResource customerListBGBrush}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
                 <RowDefinition />
@@ -88,6 +100,8 @@
         <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl">
             <model:Customer Firstname="Thoma" Lastname="Developer2" IsDeveloper="True" />
         </controls:CustomerDetailControl>  Content Property style-->
-        <controls:CustomerDetailControl Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl" Customer="Bayo,Dev,True" />
+        <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl" Customer="Bayo,Dev,True" />-->
+        <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl" Customer="{StaticResource customerAnn}" />-->
+        <controls:CustomerDetailControl Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl" />
     </Grid>
 </Page>
