@@ -261,6 +261,9 @@
     <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\bin\x86\Debug\Resources\Brushes.xbf">
       <PackagePath>Resources\Brushes.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\bin\x86\Debug\Resources\FluentXamlThemeExport.xbf">
+      <PackagePath>Resources\FluentXamlThemeExport.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\bin\x86\Debug\Resources\Strings.xbf">
       <PackagePath>Resources\Strings.xbf</PackagePath>
     </AppxPackagedFile>

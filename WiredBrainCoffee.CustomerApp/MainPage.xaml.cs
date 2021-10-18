@@ -34,6 +34,7 @@ namespace WiredBrainCoffee.CustomerApp
             Loaded += MainPage_Loaded;
             App.Current.Suspending += App_Suspending;
             _customerDataProvider = new CustomerDataProvider();
+            RequestedTheme = App.Current.RequestedTheme == ApplicationTheme.Dark ? ElementTheme.Dark : ElementTheme.Light;
         }
 
         private async void MainPage_Loaded(object sender, RoutedEventArgs e)
@@ -85,6 +86,11 @@ namespace WiredBrainCoffee.CustomerApp
             //txtFirstName.Text = customer?.Firstname ?? "";
             //txtLastName.Text = customer?.Lastname ?? "";
             //chkIsDeveloper.IsChecked = customer?.IsDeveloper;
+        }
+
+        private void Btn_ToggleTheme(object sender, RoutedEventArgs e)
+        {
+            RequestedTheme = RequestedTheme == ElementTheme.Dark ? ElementTheme.Light : ElementTheme.Dark;
         }
 
         //private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

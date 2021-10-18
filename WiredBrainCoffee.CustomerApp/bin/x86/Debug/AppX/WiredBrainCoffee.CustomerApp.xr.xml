@@ -58,15 +58,16 @@
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootEvent Name="Click" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="DisplayMemberPath" />
       <RootEvent Name="SelectionChanged" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Content" />
-      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.SymbolIcon">
       <RootProperty Name="Symbol" />
@@ -84,9 +85,55 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
     </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension">
+      <RootProperty Name="ResourceKey" />
+    </RootType>
     <RootType FullName="WiredBrainCoffee.CustomerApp.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
       <RootProperty Name="Color" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.ColorPaletteResources">
+      <RootProperty Name="Accent" />
+      <RootProperty Name="AltHigh" />
+      <RootProperty Name="AltLow" />
+      <RootProperty Name="AltMedium" />
+      <RootProperty Name="AltMediumHigh" />
+      <RootProperty Name="AltMediumLow" />
+      <RootProperty Name="BaseHigh" />
+      <RootProperty Name="BaseLow" />
+      <RootProperty Name="BaseMedium" />
+      <RootProperty Name="BaseMediumHigh" />
+      <RootProperty Name="BaseMediumLow" />
+      <RootProperty Name="ChromeAltLow" />
+      <RootProperty Name="ChromeBlackHigh" />
+      <RootProperty Name="ChromeBlackLow" />
+      <RootProperty Name="ChromeBlackMedium" />
+      <RootProperty Name="ChromeBlackMediumLow" />
+      <RootProperty Name="ChromeDisabledHigh" />
+      <RootProperty Name="ChromeDisabledLow" />
+      <RootProperty Name="ChromeGray" />
+      <RootProperty Name="ChromeHigh" />
+      <RootProperty Name="ChromeLow" />
+      <RootProperty Name="ChromeMedium" />
+      <RootProperty Name="ChromeMediumLow" />
+      <RootProperty Name="ChromeWhite" />
+      <RootProperty Name="ListLow" />
+      <RootProperty Name="ListMedium" />
+    </RootType>
+    <RootType FullName="Windows.UI.Color" />
+    <RootType FullName="Windows.UI.Xaml.Media.AcrylicBrush">
+      <RootProperty Name="BackgroundSource" />
+      <RootProperty Name="TintColor" />
+      <RootProperty Name="TintOpacity" />
+      <RootProperty Name="FallbackColor" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.CornerRadius" />
+    <RootType FullName="Windows.UI.Xaml.Thickness" />
+    <RootType FullName="System.Double" />
+    <RootType FullName="Windows.UI.Xaml.Media.RevealBackgroundBrush">
+      <RootProperty Name="TargetTheme" />
+      <RootProperty Name="Color" />
+      <RootProperty Name="FallbackColor" />
     </RootType>
     <RootType FullName="System.String" />
   </Roots.RootTypes>

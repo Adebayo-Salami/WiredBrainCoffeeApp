@@ -32,12 +32,12 @@
             <Button.FontSize>40</Button.FontSize>
         </Button>-->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition />
-            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
 
@@ -45,13 +45,15 @@
         <StackPanel Background="#F05A28" Orientation="Horizontal" Grid.ColumnSpan="3">
             <Image Source="Image/coffee2.jpg" Height="90" Margin="5" />
             <!--<TextBlock Text="Coffee Cutomers" FontSize="30" FontWeight="ExtraBold" Foreground="White" VerticalAlignment="Bottom" Margin="20" />-->
-            <TextBlock Text="{ThemeResource applicationTitle}" FontSize="30" FontWeight="ExtraBold" Foreground="White" VerticalAlignment="Bottom" Margin="20" />
+            <TextBlock Text="{StaticResource applicationTitle}" FontSize="30" FontWeight="ExtraBold" Foreground="White" VerticalAlignment="Bottom" Margin="20" />
             <TextBlock Text="Version 1.0" Foreground="#333333" VerticalAlignment="Bottom" Margin="0 0 0 25" />
         </StackPanel>
 
+        <Button Content="Toggle Theme" Grid.ColumnSpan="3" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10" Click="Btn_ToggleTheme" />
+
         <!-- Customer List -->
         <!--<Grid x:Name="customerListGrid" Grid.Row="1" Background="#EEEEEE">-->
-        <Grid x:Name="customerListGrid" Grid.Row="1" Background="{StaticResource customerListBGBrush}">
+        <Grid x:Name="customerListGrid" Grid.Row="1" Background="{ThemeResource customerListBGBrush}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
                 <RowDefinition />

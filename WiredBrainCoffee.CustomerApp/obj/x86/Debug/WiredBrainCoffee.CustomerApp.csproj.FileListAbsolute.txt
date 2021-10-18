@@ -54,3 +54,6 @@ C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainC
 C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\Resources\Strings.xaml
 C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\Resources\Brushes.xbf
 C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\Resources\Strings.xbf
+C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\Resources\FluentXamlThemeExport.xaml
+C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\Resources\FluentXamlThemeExport.xbf
+C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\bin\x86\Debug\Resources\FluentXamlThemeExport.xbf
