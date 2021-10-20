@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Navigation;
 using WiredBrainCoffee.CustomerApp.Controls;
 using WiredBrainCoffee.CustomerApp.DataProvider;
 using WiredBrainCoffee.CustomerApp.Model;
+using WiredBrainCoffee.CustomerApp.ViewModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -27,30 +28,36 @@ namespace WiredBrainCoffee.CustomerApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private CustomerDataProvider _customerDataProvider;
+        //private CustomerDataProvider _customerDataProvider;
+        public MainViewModel ViewModel { get; }
 
         public MainPage()
         {
             //customerDetailControl.SetValue(CustomerDetailControl.CustomerProperty, null);
             InitializeComponent();
+            ViewModel = new MainViewModel(new CustomerDataProvider());
+            DataContext = ViewModel;
             Loaded += MainPage_Loaded;
             App.Current.Suspending += App_Suspending;
-            _customerDataProvider = new CustomerDataProvider();
+            //_customerDataProvider = new CustomerDataProvider();
             RequestedTheme = App.Current.RequestedTheme == ApplicationTheme.Dark ? ElementTheme.Dark : ElementTheme.Light;
         }
 
         private async void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            customerListView.Items.Clear();
-            var customers = await _customerDataProvider.LoadCustomersAsync();
-            foreach (var customer in customers)
-                customerListView.Items.Add(customer);
+            //customerListView.Items.Clear();
+            //var customers = await _customerDataProvider.LoadCustomersAsync();
+            //foreach (var customer in customers)
+            //    customerListView.Items.Add(customer);
+
+            await ViewModel.LoadAsync();
         }
 
         private async void App_Suspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
-            await _customerDataProvider.SaveCustomersAsync(customerListView.Items.OfType<Customer>());
+            //await _customerDataProvider.SaveCustomersAsync(customerListView.Items.OfType<Customer>());
+            await ViewModel.SaveAsync();
             deferral.Complete();
         }
 
