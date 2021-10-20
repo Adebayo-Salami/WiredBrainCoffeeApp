@@ -25,7 +25,8 @@ namespace WiredBrainCoffee.CustomerApp.Controls
         //private Customer _customer;
         // Using a DependencyProperty as the backing store for Customer.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CustomerProperty =
-            DependencyProperty.Register("Customer", typeof(Customer), typeof(CustomerDetailControl), new PropertyMetadata(null, CustomerChangedCallback));
+            DependencyProperty.Register("Customer", typeof(Customer), typeof(CustomerDetailControl), new PropertyMetadata(null));
+            //DependencyProperty.Register("Customer", typeof(Customer), typeof(CustomerDetailControl), new PropertyMetadata(null, CustomerChangedCallback));
 
         public CustomerDetailControl()
         {
@@ -38,18 +39,16 @@ namespace WiredBrainCoffee.CustomerApp.Controls
             set { SetValue(CustomerProperty, value); }
         }
 
-        private static void CustomerChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            if(d is CustomerDetailControl customerDetailControl)
-            {
-                var customer = e.NewValue as Customer;
-                customerDetailControl.txtFirstName.Text = customer?.Firstname ?? "";
-                customerDetailControl.txtLastName.Text = customer?.Lastname ?? "";
-                customerDetailControl.chkIsDeveloper.IsChecked = customer?.IsDeveloper;
-            }
-        }
-
-
+        //private static void CustomerChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        //{
+        //    if(d is CustomerDetailControl customerDetailControl)
+        //    {
+        //        var customer = e.NewValue as Customer;
+        //        customerDetailControl.txtFirstName.Text = customer?.Firstname ?? "";
+        //        customerDetailControl.txtLastName.Text = customer?.Lastname ?? "";
+        //        customerDetailControl.chkIsDeveloper.IsChecked = customer?.IsDeveloper;
+        //    }
+        //}
 
         //public Customer Customer
         //{
@@ -63,25 +62,24 @@ namespace WiredBrainCoffee.CustomerApp.Controls
         //    }
         //}
 
+        //private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        //{
+        //    UpdateCustomer();
+        //}
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            UpdateCustomer();
-        }
+        //private void CheckBox_IsCheckChanged(object sender, RoutedEventArgs e)
+        //{
+        //    UpdateCustomer();
+        //}
 
-        private void CheckBox_IsCheckChanged(object sender, RoutedEventArgs e)
-        {
-            UpdateCustomer();
-        }
-
-        private void UpdateCustomer()
-        {
-            if (Customer != null)
-            {
-                Customer.Firstname = txtFirstName.Text;
-                Customer.Lastname = txtLastName.Text;
-                Customer.IsDeveloper = chkIsDeveloper.IsChecked.GetValueOrDefault();
-            }
-        }
+        //private void UpdateCustomer()
+        //{
+        //    if (Customer != null)
+        //    {
+        //        Customer.Firstname = txtFirstName.Text;
+        //        Customer.Lastname = txtLastName.Text;
+        //        Customer.IsDeveloper = chkIsDeveloper.IsChecked.GetValueOrDefault();
+        //    }
+        //}
     }
 }

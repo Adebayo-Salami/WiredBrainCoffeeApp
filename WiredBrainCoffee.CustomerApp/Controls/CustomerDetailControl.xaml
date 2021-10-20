@@ -7,11 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="300"
-    d:DesignWidth="400">
+    d:DesignWidth="400"
+    x:Name="root">
 
     <StackPanel>
-        <TextBox Header="Firstname" Name="txtFirstName" Margin="10" TextChanged="TextBox_TextChanged"/>
-        <TextBox Header="Lastname" Name="txtLastName" Margin="10" TextChanged="TextBox_TextChanged"/>
-        <CheckBox Content="Is Developer" x:Name="chkIsDeveloper" Margin="10" Checked="CheckBox_IsCheckChanged"  Unchecked="CheckBox_IsCheckChanged"/>
+        <TextBox Header="Firstname" Name="txtFirstName" Margin="10" TextChanged="TextBox_TextChanged" Text="{Binding ElementName=root, Path=Customer.Firstname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Header="Lastname" Name="txtLastName" Margin="10" TextChanged="TextBox_TextChanged" Text="{Binding ElementName=root, Path=Customer.Lastname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <CheckBox Content="Is Developer" Margin="10" IsChecked="{Binding ElementName=root, Path=Customer.IsDeveloper, Mode=TwoWay}" />
+        <!--<CheckBox Content="Is Developer" x:Name="chkIsDeveloper" Margin="10" Checked="CheckBox_IsCheckChanged"  Unchecked="CheckBox_IsCheckChanged" />-->
     </StackPanel>
 </UserControl>
