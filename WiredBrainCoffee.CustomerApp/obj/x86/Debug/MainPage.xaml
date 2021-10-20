@@ -77,9 +77,11 @@
                 </Button>
             </StackPanel>
 
-            <ListView x:ConnectionId='5' Grid.Row="1" x:Name="customerListView" DisplayMemberPath="Lastname"                                                     >
-                <!--<model:Customer Firstname="Thomas" Lastname="Huber" IsDeveloper="True" />-->
-            </ListView>
+            <ListView x:ConnectionId='5' Grid.Row="1" x:Name="customerListView" DisplayMemberPath="Lastname" />
+            <!--<ListView Grid.Row="1" x:Name="customerListView" DisplayMemberPath="Lastname" SelectionChanged="CustomerListView_SelectionChanged">
+                --><!--<model:Customer Firstname="Thomas" Lastname="Huber" IsDeveloper="True" />--><!--
+            </ListView>-->
+            
             <!--<ListView Grid.Row="1">
                 <ListViewItem>Thomas</ListViewItem>
                 <ListViewItem>Julia</ListViewItem>
@@ -104,7 +106,7 @@
         </controls:CustomerDetailControl>  Content Property style-->
         <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl" Customer="Bayo,Dev,True" />-->
         <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl" Customer="{StaticResource customerAnn}" />-->
-        <controls:CustomerDetailControl x:ConnectionId='4' Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl" />
+        <controls:CustomerDetailControl x:ConnectionId='4' Grid.Row="1" Grid.Column="1" x:Name="customerDetailControl" Customer="{Binding ElementName=customerListView, Path=SelectedItem, Mode=OneWay}" />
     </Grid>
 </Page>
 

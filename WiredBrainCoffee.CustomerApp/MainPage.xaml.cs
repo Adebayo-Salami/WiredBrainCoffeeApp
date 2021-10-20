@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using WiredBrainCoffee.CustomerApp.Controls;
 using WiredBrainCoffee.CustomerApp.DataProvider;
 using WiredBrainCoffee.CustomerApp.Model;
 
@@ -30,6 +31,7 @@ namespace WiredBrainCoffee.CustomerApp
 
         public MainPage()
         {
+            //customerDetailControl.SetValue(CustomerDetailControl.CustomerProperty, null);
             InitializeComponent();
             Loaded += MainPage_Loaded;
             App.Current.Suspending += App_Suspending;

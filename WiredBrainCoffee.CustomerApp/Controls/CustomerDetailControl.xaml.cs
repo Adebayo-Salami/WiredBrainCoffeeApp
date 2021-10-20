@@ -22,7 +22,10 @@ namespace WiredBrainCoffee.CustomerApp.Controls
     [ContentProperty(Name = nameof(Customer))]
     public sealed partial class CustomerDetailControl : UserControl
     {
-        private Customer _customer;
+        //private Customer _customer;
+        // Using a DependencyProperty as the backing store for Customer.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CustomerProperty =
+            DependencyProperty.Register("Customer", typeof(Customer), typeof(CustomerDetailControl), new PropertyMetadata(null, CustomerChangedCallback));
 
         public CustomerDetailControl()
         {
@@ -31,15 +34,34 @@ namespace WiredBrainCoffee.CustomerApp.Controls
 
         public Customer Customer
         {
-            get { return _customer; }
-            set 
-            { 
-                _customer = value;
-                txtFirstName.Text = _customer?.Firstname ?? "";
-                txtLastName.Text = _customer?.Lastname ?? "";
-                chkIsDeveloper.IsChecked = _customer?.IsDeveloper;
+            get { return (Customer)GetValue(CustomerProperty); }
+            set { SetValue(CustomerProperty, value); }
+        }
+
+        private static void CustomerChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if(d is CustomerDetailControl customerDetailControl)
+            {
+                var customer = e.NewValue as Customer;
+                customerDetailControl.txtFirstName.Text = customer?.Firstname ?? "";
+                customerDetailControl.txtLastName.Text = customer?.Lastname ?? "";
+                customerDetailControl.chkIsDeveloper.IsChecked = customer?.IsDeveloper;
             }
         }
+
+
+
+        //public Customer Customer
+        //{
+        //    get { return _customer; }
+        //    set 
+        //    { 
+        //        _customer = value;
+        //        txtFirstName.Text = _customer?.Firstname ?? "";
+        //        txtLastName.Text = _customer?.Lastname ?? "";
+        //        chkIsDeveloper.IsChecked = _customer?.IsDeveloper;
+        //    }
+        //}
 
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
