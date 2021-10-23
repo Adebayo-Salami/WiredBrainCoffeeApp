@@ -36,7 +36,7 @@ namespace WiredBrainCoffee.CustomerApp
             //customerDetailControl.SetValue(CustomerDetailControl.CustomerProperty, null);
             InitializeComponent();
             ViewModel = new MainViewModel(new CustomerDataProvider());
-            DataContext = ViewModel;
+            //DataContext = ViewModel;
             Loaded += MainPage_Loaded;
             App.Current.Suspending += App_Suspending;
             //_customerDataProvider = new CustomerDataProvider();
@@ -90,11 +90,11 @@ namespace WiredBrainCoffee.CustomerApp
 
         //private void CustomerListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         //{
-            //var customer = customerListView.SelectedItem as Customer;
-            //customerDetailControl.Customer = customer;
-            //txtFirstName.Text = customer?.Firstname ?? "";
-            //txtLastName.Text = customer?.Lastname ?? "";
-            //chkIsDeveloper.IsChecked = customer?.IsDeveloper;
+        //var customer = customerListView.SelectedItem as Customer;
+        //customerDetailControl.Customer = customer;
+        //txtFirstName.Text = customer?.Firstname ?? "";
+        //txtLastName.Text = customer?.Lastname ?? "";
+        //chkIsDeveloper.IsChecked = customer?.IsDeveloper;
         //}
 
         private void Btn_ToggleTheme(object sender, RoutedEventArgs e)
