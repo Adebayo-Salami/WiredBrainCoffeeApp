@@ -267,6 +267,9 @@
     <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\bin\x86\Debug\Resources\Strings.xbf">
       <PackagePath>Resources\Strings.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\bin\x86\Debug\Resources\Styles.xbf">
+      <PackagePath>Resources\Styles.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>

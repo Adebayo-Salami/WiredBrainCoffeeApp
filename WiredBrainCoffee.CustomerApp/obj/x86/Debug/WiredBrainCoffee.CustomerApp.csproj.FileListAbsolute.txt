@@ -57,3 +57,6 @@ C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainC
 C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424779200000000.json
 C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\WiredBrainCoffee.CustomerApp.csproj.AssemblyReference.cache
+C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\bin\x86\Debug\Resources\Styles.xbf
+C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\Resources\Styles.xaml
+C:\Users\osalami\Documents\Applications\WiredBrainCoffee.CustomerApp\WiredBrainCoffee.CustomerApp\obj\x86\Debug\Resources\Styles.xbf

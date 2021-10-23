@@ -56,6 +56,7 @@ MainPage.xbf
 Resources\Brushes.xbf
 Resources\FluentXamlThemeExport.xbf
 Resources\Strings.xbf
+Resources\Styles.xbf
 WiredBrainCoffee.CustomerApp.xr.xml
 Image\coffee2.jpg
 Properties\Default.rd.xml
